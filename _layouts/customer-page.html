@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+</head>
+
+<!-- One solution -->
+<!-- <body>
+    <iframe src="{{ page.dest_url }}" frameborder="0" style="overflow:hidden;height:100%;width:100%" height="100%" width="100%"></iframe>
+</body> -->
+
+<!-- An alternative: -->
+<body style="margin:0px;padding:0px;overflow:hidden">
+    <iframe src="{{ page.dest_url }}" frameborder="0" style="overflow:hidden;overflow-x:hidden;overflow-y:hidden;height:100%;width:100%;position:absolute;top:0px;left:0px;right:0px;bottom:0px" height="100%" width="100%"></iframe>
+</body>
+
+<!-- To hide scrolling with 2 alternatives as shown above: -->
+<!-- <body style="margin:0px;padding:0px;overflow:hidden">
+    <iframe src="{{ page.dest_url }}" frameborder="0" style="overflow:hidden;height:150%;width:150%" height="150%" width="150%"></iframe>
+</body> -->
+
+<!-- Hack with the second example: -->
+<!-- <body style="margin:0px;padding:0px;overflow:hidden">
+    <iframe src="{{ page.dest_url }}" frameborder="0" style="overflow:hidden;overflow-x:hidden;overflow-y:hidden;height:150%;width:150%;position:absolute;top:0px;left:0px;right:0px;bottom:0px" height="150%" width="150%"></iframe>
+</body> -->
+
+
+</html>
